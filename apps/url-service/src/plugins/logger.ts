@@ -1,7 +1,3 @@
-import pino from "pino";
+import fp from "fastify-plugin";
 
-export const logger = pino({
-  transport: {
-    target: "pino-pretty",
-  },
-});
+export default fp(async () => {});

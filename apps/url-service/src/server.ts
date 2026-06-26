@@ -1,19 +1,7 @@
-import { app } from "./app.js";
-import { env } from "./config/env.js";
+import { buildApp } from "./app.js";
 
-const start = async () => {
-  try {
-    await app.listen({
-      port: env.PORT,
-      host: "0.0.0.0",
-    });
-
-    app.log.info(`Server running on port ${env.PORT}`);
-  } catch (error) {
-    app.log.error(error);
-
-    process.exit(1);
-  }
-};
-
-start();
+const app = await buildApp();
+await app.listen({
+  host: "0.0.0.0",
+  port: app.config.PORT,
+});
