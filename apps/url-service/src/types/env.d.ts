@@ -3,4 +3,5 @@ export interface AppConfig {
   NODE_ENV: "development" | "production" | "test";
   DATABASE_URL: string;
   REDIS_URL: string;
+  BASE_URL: string;
 }

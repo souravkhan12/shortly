@@ -1,6 +1,6 @@
 export const envSchema = {
   type: "object",
-  required: ["PORT", "NODE_ENV", "DATABASE_URL", "REDIS_URL"],
+  required: ["PORT", "NODE_ENV", "DATABASE_URL", "REDIS_URL", "BASE_URL"],
   properties: {
     PORT: {
       type: "number",
@@ -19,6 +19,11 @@ export const envSchema = {
 
     REDIS_URL: {
       type: "string",
+    },
+
+    BASE_URL: {
+      type: "string",
+      format: "uri",
     },
   },
 } as const;
