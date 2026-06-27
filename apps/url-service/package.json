@@ -6,10 +6,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "start": "node dist/server.js",
-    "lint": "eslint .",
-    "format": "prettier --write ."
+    "clean": "rimraf dist",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",

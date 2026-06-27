@@ -23,7 +23,6 @@ export const envSchema = {
 
     BASE_URL: {
       type: "string",
-      format: "uri",
     },
   },
 } as const;
