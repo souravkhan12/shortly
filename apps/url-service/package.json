@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "clean": "rimraf dist",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "repo:test": "tsx src/scripts/repository-test.ts"
   },
   "keywords": [],
   "author": "",

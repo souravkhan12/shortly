@@ -18,9 +18,7 @@ export const urls = pgTable(
 
     shortCode: varchar("short_code", {
       length: 10,
-    })
-      .notNull()
-      .unique(),
+    }).unique(),
 
     originalUrl: text("original_url").notNull(),
 
